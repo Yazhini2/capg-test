@@ -53,6 +53,17 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_f2tl8PeXEeyY3cJX5bRsbA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "CAPG_TEST:_kEXZcP-rEeyO-f0g6o7VSg",
+    "version" : "Latest",
+    "type" : "job"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_i7JtkPknEeyVSqPTVlHyyQ",
     "version" : "0.1",
     "type" : "job"
