@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:pCAoLe23ukeHOEc6CLxjHAOfEj387n7Z5Bw4SN2D"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hlxRaphAcdDRTF80PlXDvt13X7O33bxfsIYdmP5h"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ezPb+NvnSOq48FhaU6KOMDpKQLBz9uTcjT4PP/O0"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:bPEK8D7doWNS6b1ju7oq1/qoPk0B4mNi9xMrNTJo"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -150,36 +150,36 @@
     <metadata connector="FLOW" label="out1" name="out1">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Var1" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="out2" name="out2">
       <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Var1" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="out3" name="out3">
       <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Var1" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
         <nodes name="Country_refno" outgoingConnections="//@node.1/@nodeData/@connections.0 //@node.1/@nodeData/@connections.3" type="id_String" xpath="row1/Country_refno"/>
-        <nodes name="Flowers" outgoingConnections="//@node.1/@nodeData/@connections.1 //@node.1/@nodeData/@connections.4 //@node.1/@nodeData/@connections.7" type="id_String" xpath="row1/Flowers"/>
+        <nodes name="Flowers" outgoingConnections="//@node.1/@nodeData/@connections.1 //@node.1/@nodeData/@connections.4 //@node.1/@nodeData/@connections.6" type="id_String" xpath="row1/Flowers"/>
       </inputTrees>
       <outputTrees name="out1">
         <nodes expression="row1.Country_refno" incomingConnections="//@node.1/@nodeData/@connections.0" name="Country_refno" type="id_String" xpath="out1/Country_refno"/>
         <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.1" name="Flowers" type="id_String" xpath="out1/Flowers"/>
-        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.2" name="Var1" type="id_String" xpath="out1/Var1"/>
+        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.2" name="ORIGIN" type="id_String" xpath="out1/ORIGIN"/>
       </outputTrees>
-      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;AUSTRALIA&quot;.equals (Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.6" name="out2">
+      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;AUSTRALIA&quot;.equals( Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.8" name="out2">
         <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.4" name="Flowers" type="id_String" xpath="out2/Flowers"/>
-        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.5" name="Var1" type="id_String" xpath="out2/Var1"/>
+        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.5" name="ORIGIN" type="id_String" xpath="out2/ORIGIN"/>
       </outputTrees>
-      <outputTrees activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="" name="out3" reject="true">
-        <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.7" name="Flowers" type="id_String" xpath="out3/Flowers"/>
-        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.8" name="Var1" type="id_String" xpath="out3/Var1"/>
+      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;AUSTRALIA&quot;!= Var.Var1" filterIncomingConnections="//@node.1/@nodeData/@connections.9" name="out3" reject="true">
+        <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.6" name="Flowers" type="id_String" xpath="out3/Flowers"/>
+        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.7" name="ORIGIN" type="id_String" xpath="out3/ORIGIN"/>
       </outputTrees>
       <varTables name="Var">
-        <nodes expression="java.util.regex.Pattern.matches(&quot;101FGR&quot;, row1.Country_refno)?&quot;AUSTRALIA&quot;:java.util.regex.Pattern.matches&#13;&#10;(&quot;231KR&quot;,row1.Country_refno)?&quot;EUROPE&quot;:&quot;FRANCE&quot; " filterOutGoingConnections="//@node.1/@nodeData/@connections.6" incomingConnections="//@node.1/@nodeData/@connections.3" name="Var1" outgoingConnections="//@node.1/@nodeData/@connections.2 //@node.1/@nodeData/@connections.5 //@node.1/@nodeData/@connections.8" type="id_String"/>
+        <nodes expression="java.util.regex.Pattern.matches(&quot;101FGR&quot;, row1.Country_refno)?&quot;AUSTRALIA&quot;:java.util.regex.Pattern.matches&#13;&#10;(&quot;231KR&quot;,row1.Country_refno)?&quot;EUROPE&quot;:&quot;FRANCE&quot; " filterOutGoingConnections="//@node.1/@nodeData/@connections.8 //@node.1/@nodeData/@connections.9" incomingConnections="//@node.1/@nodeData/@connections.3" name="Var1" outgoingConnections="//@node.1/@nodeData/@connections.2 //@node.1/@nodeData/@connections.5 //@node.1/@nodeData/@connections.7" type="id_String"/>
       </varTables>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
@@ -187,9 +187,10 @@
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.1/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.1/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.1" xsi:type="TalendXMLMap:FilterConnection"/>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.2/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.2/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.1" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.2" xsi:type="TalendXMLMap:FilterConnection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="-192">
@@ -414,13 +415,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cb2c36e5-684b-4828-8a98-32d4846fd0a8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8GXUS1SRK4LMZLMS7u8kJfaNGEonxSJeoYMKbdrstkoNaF4/mmK8PZdr2aP+yodsPR1iIeH6ilzX&#13;
-WhL1W7P7rg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d611407c-6be7-4f72-9d3d-67e8e248b20d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+Kz5moKB1/lyuZaFYG9lFzExTnXM8diCpEp6fdhPZzs4iKaH7+INV8I2o/f/OPv+Cl8vsC1iNxY9&#13;
-fGWZipRtbw==</DigestValue></Reference></SignedInfo><SignatureValue>DMQUuc2H9Ff2Zu2sFQ21CPvPatKUAuZWnnKuIolW5eCFGqL5JjvjP1QfUzF3tsy9PmzBSIZhgoMD&#13;
-dLZlndwnrA+QhfLgQ6kIUmUk+AtoSObeRk56Yc8uuKY1JnGkh54AnzdPVurK44oi8yAB6oD82xnt&#13;
-T0S9pxfCuxuhxAtjlYCmBp8BqZjLeh5Wfi5yEYCE0qrbr5iLDvTvc00awTcj+JSRnVTamDkzpUH0&#13;
-px/AszfBFFpfXB0+zUcQ/shx81lau3b7yh9zOHpQ1UBnfKWrSuvRnIwdzt4vxNYF0yHByY0sp9Fs&#13;
-fexOeWtm1dxSbmHavHRxjOF2sEAUGP0yW9aLDA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_934539a7-aadf-4c64-8f58-fc317e60e94f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NeIpTyzrk9+m5wot/FWILqYFaMlNFwNZKxizktSPjT9dzp/zU5z1yw6RFN9RKxWJAr3lM+C8k96y&#13;
+mu/+9H0EXg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3b94bd10-4745-4484-b7ad-a053888eae55"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jz10JWH4EMQCed36w5lOnfZWZPE8yUTS+jEpB4dxsZyetfjVu5y2rh0J/g5LK+UhBHDtWHXpvkl6&#13;
+QRAibRN4Kw==</DigestValue></Reference></SignedInfo><SignatureValue>Uu4uq4nrhxVqUgBUrnUtz8h98YUvtEacTzCIzyGWgSR6rh+hw0gg69TZZ8KhhQ1FV5riKH+Mf1tz&#13;
+DekzajUDozlPKMljBVkjix9ovp6iQ8Stz9LEPqRhM73uqx8MXWS+HiXHdoIHA3MFjQbBsTRqXVBk&#13;
+DBVnvqpBAZ+h5AQn6MG9s4y/wR7ofChUsRS3PpFS7XUGp/3dEo21K6YtTlbMwBhoo9CtU0g6gPCx&#13;
+QAo7HpzlyFrVOzePqEJsyEy3ClnAOVPuxniYHdaZClSuRI/toTMuCqFJ20NLJpsY+yzucb9lTrSj&#13;
+D14pPV+nddKCthqUEFVNa4ELar2qnla5Q0uNRQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -442,4 +443,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d611407c-6be7-4f72-9d3d-67e8e248b20d" Target="#_cb2c36e5-684b-4828-8a98-32d4846fd0a8"><Timestamp>2022-07-10 17:38:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3b94bd10-4745-4484-b7ad-a053888eae55" Target="#_934539a7-aadf-4c64-8f58-fc317e60e94f"><Timestamp>2022-07-10 17:41:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
