@@ -106,4 +106,15 @@
     "version" : "Latest",
     "type" : "context"
   } ]
+}, {
+  "baseItem" : {
+    "id" : "_zFM9UABZEe2hf75srbeNuA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "CAPG_TEST:_sKQr0ABWEe2hf75srbeNuA",
+    "version" : "Latest",
+    "type" : "job"
+  } ]
 } ]
