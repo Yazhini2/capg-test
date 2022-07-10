@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:UpbK35j6ZJKNNj7f8ThSTTjA0zeUXpg8wBYVX6dG"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:lqMrwNgPfjVn2IKKWwefnF2xTBw6NHOiYC2LZBXH"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:izubCyGEDtySthyRzyK/Tp/pz1yt33SIq2EmzGb0"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:HYA1nfx3Q5sQ/fu4DHw9yuhotKRqMkajRPkKdnDy"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -235,7 +235,7 @@
       <column comment="" key="false" length="-1" name="DOMAIN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="128">
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" show="false" value="100"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -255,7 +255,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tJoin" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
+  <node componentName="tJoin" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJoin_1"/>
     <elementParameter field="CHECK" name="USE_LOOKUP_COLS" value="true"/>
     <elementParameter field="TABLE" name="LOOKUP_COLS">
@@ -293,7 +293,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="352">
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_2"/>
     <elementParameter field="TEXT" name="NB_ROWS" show="false" value="100"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -313,7 +313,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="224">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -349,59 +349,6 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="10"/>
-    <elementParameter field="TABLE" name="VALUES" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="NAME"/>
-      <elementValue elementRef="ARRAY" value="StringHandling.DOWNCASE(&quot;Hello&quot; )"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsState()"/>
-    </elementParameter>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRowGenerator_3">
-      <column comment="" key="false" length="-1" name="NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;DOWNCASE&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;string&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Hello\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;StringHandling&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsState&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_4"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="NAME"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_4">
-      <column comment="" key="false" length="-1" name="NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="STATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsState&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-    </metadata>
-  </node>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tLogRow_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
@@ -424,11 +371,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tRowGenerator_3" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_3" target="tLogRow_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
-  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -449,18 +391,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_3"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6d858c8b-a451-468a-a504-e04c852c680c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HZ2KQ06Kk58c4WhdVf/BvBoMaZDnQTDs89kH2/X/QK2om+vRY/8xcudVQZDKoGgdMadIiZd+fwPT&#13;
-KyG+oXkc3w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ca53803a-4762-4db9-a399-c3187c6a0c6c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YF36Dxkgezy3WlxbPNhVUmx41EuSYP+3Vhg+6WVEmkMv48RuBQ6yr92zENtKPWAnZYF1hCWkN3yc&#13;
-334CkkqSkQ==</DigestValue></Reference></SignedInfo><SignatureValue>hVnKFjT3q0rBOxIzVpgwA4AVh+QgVb7ToW4dNI75LT0Dgq6Hsx+CSJsXbi/6qId8Nve0/7OO8PHb&#13;
-tLa976M/9dRWXIMqc3zLPaeIN0/WVx1WNYCFCGykmd27RMHs5rPpY+kdvoK/xkp8YgkyAbF8lxme&#13;
-uUejiT5wSJVkJ6j+q3WPpLyaxtC6lrNgGvA/D6SAXf7wRTVshwWqoX0Gd9TZfUtDADWLMJjq6apT&#13;
-f5XZSmA2f/OtoxDnXb8WcIf3WmcZdDaBibLqK6X1NpjUmGn0m5BtyEeekNnQQQBb+Du/kq2hLBhj&#13;
-cBvQPZuTz4iLxWzNvH+Z1EYzCHV8/CRyu+1vLw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2bd3bb5c-44ae-41bd-bf78-717f0c0cc9b3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>olf658PcTjLN7RxCPfQZCDeiPN4Gt8/HhWOmrihpu3JIxxX8h50Ezu+6OZ148vBx2Bxf3MoO5LDp&#13;
+FvBFwf4xxw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34b6060f-7c24-4aba-8443-58efec409e0d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yHkRk0yoU7sRjlZbIt1yFmgNry1Vd4LCyctH8gB/S9pRUfLYaCD5iAurUjbndSrbhJy+4GN9r5Cx&#13;
+CT94FhK9dQ==</DigestValue></Reference></SignedInfo><SignatureValue>i6kTjgwYmElRgtaT8yEHUvlDlvK5+SFDQ1Pfs1o8IkPk53Z1VN4lptYWFgmcIgxdohDH5RbaeK48&#13;
+/OXp2ZHBep9sDXdCG4YKK5lkLQzk6fubWzQYH0lEbSsebno0+5UIcz9Rxh25H0sqrTy2oUvK9Qeo&#13;
+6WqChGf3UjqZAiFtp2+O/HKqiWZ2/rJqKyUjUR3tjBZsrcKWNYofLPx/YCaSb/40k26nDp/jEiUz&#13;
+rLQJhOnPMaHVqy4pa4fLlD5d0qUx7hxcdX9LP0SbHcWy1EZU6Gdt45mDv2xfGp1t12nRxAU16AXA&#13;
+HQT03Z/8hncuSgfy47ccifIx2F7llp+SdkunHA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -482,4 +419,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ca53803a-4762-4db9-a399-c3187c6a0c6c" Target="#_6d858c8b-a451-468a-a504-e04c852c680c"><Timestamp>2022-07-10 14:06:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34b6060f-7c24-4aba-8443-58efec409e0d" Target="#_2bd3bb5c-44ae-41bd-bf78-717f0c0cc9b3"><Timestamp>2022-07-10 14:13:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
