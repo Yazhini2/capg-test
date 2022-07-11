@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:DMsoZjOABrVV8qON2FX+DAlWmofUUMhwUJ0S3s1C"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:SDT1UHyVmBuRhpyeqX+k7gIbjdsgsWWzxdZJIiAG"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:j/7HFpvxXbwVARrz7vJ4F0oq1s2syIqGINjHINYW"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/1w0AliwMfLvwoMHw9MhjxaarrcybuUa2CGNttE7"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -115,21 +115,21 @@
     <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="Country_refno"/>
       <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Flowers"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Product"/>
       <elementValue elementRef="VALUE" value=""/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
     <elementParameter field="TABLE" name="INTABLE">
       <elementValue elementRef="Country_refno" value="&quot;101FGR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;GOLDEN WATTLE&quot;"/>
+      <elementValue elementRef="Product" value="&quot;COMPUTER&quot;"/>
       <elementValue elementRef="Country_refno" value="&quot;222RJX&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;IRIS FRANCE&quot;"/>
+      <elementValue elementRef="Product" value="&quot;SMARTPHONE&quot;"/>
       <elementValue elementRef="Country_refno" value="&quot;231KR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;LILY&quot;"/>
+      <elementValue elementRef="Product" value="&quot;MICROWAVE&quot;"/>
       <elementValue elementRef="Country_refno" value="&quot;101FGR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;BANKSHIA&quot;"/>
+      <elementValue elementRef="Product" value="&quot;LAPTOP&quot;"/>
       <elementValue elementRef="Country_refno" value="&quot;231KR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;IRIS&quot;"/>
+      <elementValue elementRef="Product" value="&quot;TELEVISION&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -138,7 +138,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="0">
@@ -149,8 +149,8 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out1" name="out1">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="out2" name="out2">
       <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -161,47 +161,47 @@
       <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="out4" name="out4">
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
         <nodes name="Country_refno" outgoingConnections="//@node.1/@nodeData/@connections.0 //@node.1/@nodeData/@connections.3" type="id_String" xpath="row1/Country_refno"/>
-        <nodes name="Flowers" outgoingConnections="//@node.1/@nodeData/@connections.1 //@node.1/@nodeData/@connections.4 //@node.1/@nodeData/@connections.7 //@node.1/@nodeData/@connections.9" type="id_String" xpath="row1/Flowers"/>
+        <nodes name="Product" outgoingConnections="//@node.1/@nodeData/@connections.1 //@node.1/@nodeData/@connections.5 //@node.1/@nodeData/@connections.9 //@node.1/@nodeData/@connections.11" type="id_String" xpath="row1/Product"/>
       </inputTrees>
       <outputTrees name="out1">
         <nodes expression="row1.Country_refno" incomingConnections="//@node.1/@nodeData/@connections.0" name="Country_refno" type="id_String" xpath="out1/Country_refno"/>
-        <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.1" name="Flowers" type="id_String" xpath="out1/Flowers"/>
-        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.2" name="ORIGIN" type="id_String" xpath="out1/ORIGIN"/>
+        <nodes expression="row1.Product" incomingConnections="//@node.1/@nodeData/@connections.1" name="Product" type="id_String" xpath="out1/Product"/>
+        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.2" name="Company" type="id_String" xpath="out1/Company"/>
       </outputTrees>
-      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;AUSTRALIA&quot;.equals( Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.6" name="out2">
-        <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.4" name="Flowers" type="id_String" xpath="out2/Flowers"/>
-        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.5" name="ORIGIN" type="id_String" xpath="out2/ORIGIN"/>
+      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;DELL&quot;.equals( Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.4" name="out2">
+        <nodes expression="row1.Product" incomingConnections="//@node.1/@nodeData/@connections.9" name="Flowers" type="id_String" xpath="out2/Flowers"/>
+        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.10" name="ORIGIN" nullable="false" type="id_String" xpath="out2/ORIGIN"/>
       </outputTrees>
-      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;EUROPE&quot;.equals( Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.11" name="out3">
-        <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.7" name="Flowers" type="id_String" xpath="out3/Flowers"/>
-        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.8" name="ORIGIN" type="id_String" xpath="out3/ORIGIN"/>
+      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;LG&quot;.equals( Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.7" name="out3">
+        <nodes expression="row1.Product" incomingConnections="//@node.1/@nodeData/@connections.11" name="Flowers" type="id_String" xpath="out3/Flowers"/>
+        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.12" name="ORIGIN" nullable="false" type="id_String" xpath="out3/ORIGIN"/>
       </outputTrees>
-      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;FRANCE&quot;.equals( Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.12" name="out4">
-        <nodes expression="row1.Flowers" incomingConnections="//@node.1/@nodeData/@connections.9" name="Flowers" type="id_String" xpath="out4/Flowers"/>
-        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.10" name="ORIGIN" type="id_String" xpath="out4/ORIGIN"/>
+      <outputTrees activateExpressionFilter="true" expressionFilter="&quot;SAMSUNG&quot;.equals( Var.Var1)" filterIncomingConnections="//@node.1/@nodeData/@connections.8" name="out4">
+        <nodes expression="row1.Product" incomingConnections="//@node.1/@nodeData/@connections.5" name="Product" type="id_String" xpath="out4/Product"/>
+        <nodes expression="Var.Var1" incomingConnections="//@node.1/@nodeData/@connections.6" name="Company" type="id_String" xpath="out4/Company"/>
       </outputTrees>
       <varTables name="Var">
-        <nodes expression="java.util.regex.Pattern.matches(&quot;101FGR&quot;, row1.Country_refno)?&quot;AUSTRALIA&quot;:java.util.regex.Pattern.matches&#13;&#10;(&quot;231KR&quot;,row1.Country_refno)?&quot;EUROPE&quot;:&quot;FRANCE&quot; " filterOutGoingConnections="//@node.1/@nodeData/@connections.6 //@node.1/@nodeData/@connections.11 //@node.1/@nodeData/@connections.12" incomingConnections="//@node.1/@nodeData/@connections.3" name="Var1" outgoingConnections="//@node.1/@nodeData/@connections.2 //@node.1/@nodeData/@connections.5 //@node.1/@nodeData/@connections.8 //@node.1/@nodeData/@connections.10" type="id_String"/>
+        <nodes expression="java.util.regex.Pattern.matches(&quot;101FGR&quot;, row1.Country_refno)?&quot;DELL&quot;:java.util.regex.Pattern.matches&#13;&#10;(&quot;231KR&quot;,row1.Country_refno)?&quot;LG&quot;:&quot;SAMSUNG&quot; " filterOutGoingConnections="//@node.1/@nodeData/@connections.4 //@node.1/@nodeData/@connections.7 //@node.1/@nodeData/@connections.8" incomingConnections="//@node.1/@nodeData/@connections.3" name="Var1" outgoingConnections="//@node.1/@nodeData/@connections.2 //@node.1/@nodeData/@connections.6 //@node.1/@nodeData/@connections.10 //@node.1/@nodeData/@connections.12" type="id_String"/>
       </varTables>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.1/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.1/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.1" xsi:type="TalendXMLMap:FilterConnection"/>
-      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.2/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.2/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.3/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.3/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.2" xsi:type="TalendXMLMap:FilterConnection"/>
       <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.3" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.1/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.1/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.1" target="//@node.1/@nodeData/@outputTrees.2/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@varTables.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.2/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="-96">
@@ -225,7 +225,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="AUSTRALIA"/>
+    <elementParameter field="TEXT" name="LABEL" value="DELL"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out2" name="tLogRow_1">
       <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -248,19 +248,19 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="Country_refno"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Flowers"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Product"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ORIGIN"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="ORIGIN"/>
+    <elementParameter field="TEXT" name="LABEL" value="COMPANY"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out1" name="tLogRow_3">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="96">
@@ -284,7 +284,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="EUROPE"/>
+    <elementParameter field="TEXT" name="LABEL" value="LG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out3" name="tLogRow_2">
       <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -305,18 +305,18 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="Flowers"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Product"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ORIGIN"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="FRANCE"/>
+    <elementParameter field="TEXT" name="LABEL" value="SAMSUNG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out4" name="tLogRow_5">
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ORIGIN" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Company" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tParallelize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="32">
@@ -339,13 +339,15 @@
     <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
     <elementParameter field="TABLE" name="INTABLE">
       <elementValue elementRef="Country_refno" value="&quot;101FGR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;GOLDEN WATTLE&quot;"/>
+      <elementValue elementRef="Flowers" value="&quot;COMPUTER&quot;"/>
       <elementValue elementRef="Country_refno" value="&quot;222RJX&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;IRIS FRANCE&quot;"/>
+      <elementValue elementRef="Flowers" value="&quot;SMARTPHONE&quot;"/>
       <elementValue elementRef="Country_refno" value="&quot;231KR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;LILY&quot;"/>
+      <elementValue elementRef="Flowers" value="&quot;MICROWAVE&quot;"/>
       <elementValue elementRef="Country_refno" value="&quot;101FGR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;BANKSHIA&quot;"/>
+      <elementValue elementRef="Flowers" value="&quot;LAPTOP&quot;"/>
+      <elementValue elementRef="Country_refno" value="&quot;231KR&quot;"/>
+      <elementValue elementRef="Flowers" value="&quot;DIGITAL CAMERA&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -459,13 +461,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f580d597-c423-44d1-bc2e-74d321e47ebe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>inhGDipbePXFaIbQd4BGytgvpwjjz4pyD3f7uaKN8HPMDhGjpZy3VTV3kHjL1T+rCJxCrKiT5zzy&#13;
-PppgNmIF+Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c9050127-759f-4140-b596-1edcb766346e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sqSkyD0tXdz3Zmne74/LefOBWf167AEyGMdHrpNBG+zDLMqpczCHkfQyIkkMQxc1h7luOl0tU2FO&#13;
-n5UDne5ndQ==</DigestValue></Reference></SignedInfo><SignatureValue>c+m5bIqNKGgbo6a4h9YYLrjW7Cd32E16xcQX408j7t4FkOHRuHSxxbeKnCEIB5WFei1kfRTVku0h&#13;
-x37ApRS+7UXKbGqfN+YaP7/kZD8ZhoqIvTubmMcXBR5dFlIXVse6rbkZbvMIgDtMak31gKJnAExw&#13;
-dx28NQZJ9vwzIow+xkXRS4oedo7/7HDnjdUN2m+u1dOzGsCu1dYi7lKux0NRHBgko/cIb4DbcVuA&#13;
-UbU4T4327wgY7DTwV5j+4P/NxkplD4gDIP9+RQAJVCOk/wKDdtUteg36E7gmmLHSWY2J3B7bOL+g&#13;
-azi7ofMnHSfA6AZLWDDZvmYpgV9mn+ny52w55Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c475a793-6729-47a2-b4c2-3f126337b529"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>V7MyGll4jdnKlbldqmQ7FtZJKCxMJvs6a7hwtZpwHJq0lW3BBrtGectD6C2gliH21rUwinztr2Q5&#13;
+WRTPzW/Vyg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4c2fcb4c-9be5-4a6f-869c-0bdb46f1035d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>73EizPfKlvQCQZPjlJi+7/1TH2zNSNz8wUOrYwy5aZyF8cSaZfLgNZtHuJxKaxEGpwafPKffJQQt&#13;
+835rPm4u8w==</DigestValue></Reference></SignedInfo><SignatureValue>BDY1KQil4kbuaOzo24iyG7Cn0/o0MD6T8+TE4TM4DEqp2VZNxX+vGb02ujpXDSnwzCaD8nJiNhVq&#13;
+ke1/l2snC0cPecWlHpaEG5mASXB28GRHooLy3EOIIsKPwQjsiIqFlodXdIPDk7XWYrb+lJ4s8P+n&#13;
+O0ynG1BWOnm/ZSd8VoXA2b+9o2Rg9kG0mzU94Ftcx3X/v9EU+dniihPUWx7rstnTj8T3mCyUz75X&#13;
+b52sJfPv+qIoruYCq0NgMYjBDy4PyasASjUkVxvMQzurMi/7n6oRhDZHI6FSK+jc1oLg3+yu8/Sg&#13;
+Juz8FxGfPbHHD6Ev/EUOIIrECX5cTwu4dXSf6A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -487,4 +489,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c9050127-759f-4140-b596-1edcb766346e" Target="#_f580d597-c423-44d1-bc2e-74d321e47ebe"><Timestamp>2022-07-10 19:00:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4c2fcb4c-9be5-4a6f-869c-0bdb46f1035d" Target="#_c475a793-6729-47a2-b4c2-3f126337b529"><Timestamp>2022-07-11 04:04:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
