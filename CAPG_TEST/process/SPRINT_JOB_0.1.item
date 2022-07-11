@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:SDT1UHyVmBuRhpyeqX+k7gIbjdsgsWWzxdZJIiAG"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:vD1oEKXcxaqXpHmoT48EMY5kvgf9hzHJnTeQ+bT9"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/1w0AliwMfLvwoMHw9MhjxaarrcybuUa2CGNttE7"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:qJOlNJgFwZq3FYJ0lCiSS70czK/DSGsJJuvMoR07"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -333,21 +333,21 @@
     <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="Country_refno"/>
       <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Flowers"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Product"/>
       <elementValue elementRef="VALUE" value=""/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
     <elementParameter field="TABLE" name="INTABLE">
       <elementValue elementRef="Country_refno" value="&quot;101FGR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;COMPUTER&quot;"/>
+      <elementValue elementRef="Product" value=""/>
       <elementValue elementRef="Country_refno" value="&quot;222RJX&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;SMARTPHONE&quot;"/>
+      <elementValue elementRef="Product" value=""/>
       <elementValue elementRef="Country_refno" value="&quot;231KR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;MICROWAVE&quot;"/>
+      <elementValue elementRef="Product" value=""/>
       <elementValue elementRef="Country_refno" value="&quot;101FGR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;LAPTOP&quot;"/>
+      <elementValue elementRef="Product" value=""/>
       <elementValue elementRef="Country_refno" value="&quot;231KR&quot;"/>
-      <elementValue elementRef="Flowers" value="&quot;DIGITAL CAMERA&quot;"/>
+      <elementValue elementRef="Product" value=""/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -356,7 +356,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_2">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="224">
@@ -375,7 +375,7 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="Country_refno"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Flowers"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Product"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
@@ -383,32 +383,32 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_4">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_1"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
-      <elementValue elementRef="INPUT_COLUMN" value="Flowers"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Product"/>
       <elementValue elementRef="FUNCTION" value="$source == null? false : $source.matches($target) $operator true"/>
       <elementValue elementRef="OPERATOR" value="=="/>
-      <elementValue elementRef="RVALUE" value="&quot;LILY&quot;"/>
+      <elementValue elementRef="RVALUE" value="&quot;SMARTPHONE&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_1">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="Country_refno" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Flowers" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -461,13 +461,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c475a793-6729-47a2-b4c2-3f126337b529"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>V7MyGll4jdnKlbldqmQ7FtZJKCxMJvs6a7hwtZpwHJq0lW3BBrtGectD6C2gliH21rUwinztr2Q5&#13;
-WRTPzW/Vyg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4c2fcb4c-9be5-4a6f-869c-0bdb46f1035d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>73EizPfKlvQCQZPjlJi+7/1TH2zNSNz8wUOrYwy5aZyF8cSaZfLgNZtHuJxKaxEGpwafPKffJQQt&#13;
-835rPm4u8w==</DigestValue></Reference></SignedInfo><SignatureValue>BDY1KQil4kbuaOzo24iyG7Cn0/o0MD6T8+TE4TM4DEqp2VZNxX+vGb02ujpXDSnwzCaD8nJiNhVq&#13;
-ke1/l2snC0cPecWlHpaEG5mASXB28GRHooLy3EOIIsKPwQjsiIqFlodXdIPDk7XWYrb+lJ4s8P+n&#13;
-O0ynG1BWOnm/ZSd8VoXA2b+9o2Rg9kG0mzU94Ftcx3X/v9EU+dniihPUWx7rstnTj8T3mCyUz75X&#13;
-b52sJfPv+qIoruYCq0NgMYjBDy4PyasASjUkVxvMQzurMi/7n6oRhDZHI6FSK+jc1oLg3+yu8/Sg&#13;
-Juz8FxGfPbHHD6Ev/EUOIIrECX5cTwu4dXSf6A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_771a604a-1031-4fa4-b0a7-85b89a826fdc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QOEhbSTzcEfQbHenicrXxqBDxskGdLbXqkHA21MPOh501GGPbEdlhMze/zgPwtAvlFMBE1tfiS5o&#13;
+FQWDnN6qQA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eb79af10-876a-4cfe-bca8-02132318bdd3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>U3ImEoXX/rankaBoSixdf0HnRXWC8MO1ytdXXnN+Jiq9rBTJ0p2kVHet30icPmgEW2bWGdLgKmS9&#13;
+Y0agYyDQ1w==</DigestValue></Reference></SignedInfo><SignatureValue>JIQE14C8oe4/NaEORdy4DHmD583sZsj2NQ+44XM+zd6bk8Yo/FTp4gMdQEo8Tmt+15ebp+QHbacO&#13;
+1ovxUHTttvyqH+Wxa21cwd7MpMT3BKzED6BNiVnPsmZXxtXiXrgXe0Z4D03HLlmLSrERCgLyzn8u&#13;
+6Y15W0sznDWGkM0CMcITgsgzrmKpTntFYSF6hjh8O9Ga4TJid5BT15OOaZ2/T/Acu322ZclNDHo3&#13;
+6aCohBhF85yLysyzQSRCUitVf+84SwUB0WX+nm0nQ44SyuC9FBhnfePq3wcesmNX0H7knlqoRSjz&#13;
+RkZTXpVa8GMnuKHebGuVjzZzxcoXwUdnDcc8yw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -489,4 +489,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4c2fcb4c-9be5-4a6f-869c-0bdb46f1035d" Target="#_c475a793-6729-47a2-b4c2-3f126337b529"><Timestamp>2022-07-11 04:04:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eb79af10-876a-4cfe-bca8-02132318bdd3" Target="#_771a604a-1031-4fa4-b0a7-85b89a826fdc"><Timestamp>2022-07-11 04:06:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
